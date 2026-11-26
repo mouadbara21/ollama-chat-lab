@@ -9,6 +9,8 @@ const DEFAULT_MODEL = process.env.OLLAMA_MODEL ?? "gemma4:e2b";
 
 app.use(express.json());
 app.use(express.static("public"));
+app.use("/vendor", express.static("node_modules/marked/lib"));
+app.use("/vendor", express.static("node_modules/dompurify/dist"));
 
 // ---------- POST /api/chat ----------
 app.post("/api/chat", async (req, res) => {

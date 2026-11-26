@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/mouadbara21/ollama-chat-lab#readme",
   "dependencies": {
-    "express": "^5.3.0"
+    "dompurify": "^3.5.0",
+    "express": "^5.3.0",
+    "marked": "^18.3.0"
   }
 }

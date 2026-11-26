@@ -42,3 +42,8 @@ form {
 button { padding: 10px 16px; border: 0; border-radius: 8px; background: #2563eb; color: #fff; cursor: pointer; }
 #stop { background: #dc2626; }
 button:disabled, input:disabled, select:disabled { opacity: .5; cursor: not-allowed; }
+.msg .answer { white-space: normal; }
+.msg .answer > :first-child { margin-top: 0; }
+.msg .answer > :last-child { margin-bottom: 0; }
+.msg .answer pre { background: #f4f4f5; padding: 10px; border-radius: 6px; overflow-x: auto; }
+.msg .answer code { font-family: ui-monospace, monospace; font-size: 13px; }

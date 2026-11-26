@@ -103,6 +103,7 @@ form.addEventListener("submit", async (e) => {
   details.append(summary, thinkingEl);
   details.hidden = true;
   const answerEl = document.createElement("div");
+    answerEl.className = "answer";
   const statsEl = document.createElement("small");
   bubble.append(details, answerEl, statsEl);
   scrollDown();
@@ -140,7 +141,7 @@ form.addEventListener("submit", async (e) => {
       }
       if (chunk.message?.content) {
         content += chunk.message.content;
-        answerEl.textContent = content;
+                answerEl.innerHTML = DOMPurify.sanitize(marked.parse(content));
       }
       if (chunk.done) {
         const tps = chunk.eval_count / (chunk.eval_duration / 1e9);
